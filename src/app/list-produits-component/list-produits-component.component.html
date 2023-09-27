@@ -1,0 +1,30 @@
+<div [ngStyle] ="{'margin-left':'10px'}">
+<h1> Liste Produit </h1>
+<h3> Code </h3>
+<input type="text" [(ngModel)]='searchTerm' />
+<div *ngFor="let produit of filterData()">
+    Produit : {{ produit.libelle}} <br> <h3 [hidden]="IdProductUpdated != produit.idProduit"> TVA Modifier </h3>
+    <ul>
+        <li>Identifiant : {{ produit.idProduit}} </li>
+        <li>Code : {{ produit.code}} </li>
+        <li [ngStyle]="produit.prixUnitaire >50 ? {'color': 'blue', 'font-style': 'italic','font-size': '20px'} : {'color': 'red'}">Prix unitaire : {{ produit.prixUnitaire}} </li>
+        <li >Taux TVA : {{ produit.tauxTVA}} 
+            <button value="ajusterTVA" (click)="ChangeTVA(produit)" [disabled]="produit.tauxTVA==0.02"> ajusterTVA </button>
+        </li>
+    </ul>
+
+</div>
+
+<hr>
+<h1> Ajouter un produit </h1>
+
+    <div>
+        id Produit <input type="text"  [(ngModel)]='idProduit'><br>
+        code : <input type="text" [(ngModel)]='CodeProduct' ><br>
+        Libelle : <input type="text" [(ngModel)]='libelle' ><br>
+        Prix unitaire : <input type="text" [(ngModel)]='prixUnitaire' ><br>
+        Taux TVA : <input type="text" [(ngModel)]='tauxTVA' ><br>
+        <input type="button" value="ajouter" (click)="AddNewProduct()">
+    </div>
+
+</div>

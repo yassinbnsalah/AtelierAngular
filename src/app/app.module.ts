@@ -3,14 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { FirstComponent } from './first/first.component';
+import { ListUserComponentComponent } from './list-user-component/list-user-component.component';
+import { BackgroundColorChangeDirective } from './background-color-change.directive';
+import { ListProduitsComponentComponent } from './list-produits-component/list-produits-component.component';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FirstComponent,
+    ListUserComponentComponent,
+    BackgroundColorChangeDirective,
+    ListProduitsComponentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

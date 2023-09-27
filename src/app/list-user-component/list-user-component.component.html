@@ -1,0 +1,28 @@
+<p>list-user-component works!</p>
+<h1> Liste users </h1>
+
+<table border="2px" class="table"> 
+    <tr>
+        <td> id </td>
+        <td> firstName </td>
+        <td> LastName </td>
+        <td> Action </td>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{ user.idCustomer }}</td>
+        <td>{{ user.firstName }} </td>
+        <td>{{ user.lastName }}</td>
+        <td *ngIf="user.accountCategory == 'Admin'"> <button disabled class="btn btn-danger btn-sm"> Delete</button></td>
+        <td *ngIf="user.accountCategory != 'Admin'"> <button (click)="deleteUser(user)" class="btn btn-danger btn-sm"> Delete</button>
+            <button (click)="detailsUser(user)"  class="btn btn-primary btn-sm"> Details</button></td>
+    </tr>
+</table>
+
+
+<div *ngIf="userDetails.idCustomer != null">
+<h2> User Details {{userDetails.idCustomer}}  </h2>
+
+<h2> User name {{userDetails.firstName}}  </h2>
+
+<h2> User lastname {{userDetails.lastName}}  </h2>
+</div>
