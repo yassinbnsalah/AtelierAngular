@@ -1,0 +1,12 @@
+<h1> invoice Details {{ invoiceState }} </h1> 
+<div *ngIf="invoiceState == 'false'">
+    <h3> Impossible de visualiser les détails
+        de la facture</h3>  
+</div>
+
+<div *ngIf="invoiceState == 'true'">
+    <h3> see it</h3>
+</div>
+
+
+<a  [routerLink]="['/invoice']"> Retour vers la liste des invoices </a>

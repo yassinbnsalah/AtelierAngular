@@ -11,7 +11,10 @@ import { FormsModule } from '@angular/forms';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './core/UserManager/login/login.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { DetailsUserComponent } from './details-user/details-user.component'; // Import FormsModule
+import { DetailsUserComponent } from './details-user/details-user.component';
+import { MainInvoiceComponentComponent } from './main-invoice-component/main-invoice-component.component';
+import { InvoiceListComponentComponent } from './invoice-list-component/invoice-list-component.component';
+import { InvoiceComponentComponent } from './invoice-component/invoice-component.component'; // Import FormsModule
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,10 @@ import { DetailsUserComponent } from './details-user/details-user.component'; //
     NotFoundComponent,
     LoginComponent,
     NavbarComponent,
-    DetailsUserComponent
+    DetailsUserComponent,
+    MainInvoiceComponentComponent,
+    InvoiceListComponentComponent,
+    InvoiceComponentComponent
   ],
   imports: [
     BrowserModule,

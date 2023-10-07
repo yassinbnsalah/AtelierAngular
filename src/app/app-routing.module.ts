@@ -6,11 +6,15 @@ import { ListProduitsComponentComponent } from './list-produits-component/list-p
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './core/UserManager/login/login.component';
 import { DetailsUserComponent } from './details-user/details-user.component';
+import { MainInvoiceComponentComponent } from './main-invoice-component/main-invoice-component.component';
+import { InvoiceComponentComponent } from './invoice-component/invoice-component.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path: "",redirectTo:"login",pathMatch:"full"  },
   {path: "test",component: ListUserComponentComponent},
+  {path: "invoice" , component : MainInvoiceComponentComponent},
+  {path: "invoice/:id/:active" , component: InvoiceComponentComponent},
   {path: "first",component: FirstComponent},
   {path: "first/:id" , component:DetailsUserComponent},
  /* {path: "user" , component:ListUserComponentComponent , children:[
